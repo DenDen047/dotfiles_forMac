@@ -37,14 +37,21 @@ let g:neobundle_default_git_protocol='https'
 " neobundle#begin - neobundle#end の間に導入するプラグインを記載します。
 NeoBundleFetch 'Shougo/neobundle.vim'
 " ↓こんな感じが基本の書き方
-" plugin
+" --- plugin ---
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'jiangmiao/auto-pairs'
-NeoBundle 'terryma/vim-multiple-cursors', { 'autload': {
-      \ 'function_prefix': 'multiple_cursors',
-      \ }}
-" colorscheme
+" NeoBundle 'terryma/vim-multiple-cursors' <- 動作がおかしい
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'Shougo/vimproc', {
+  \ 'build' : {
+  \     'windows' : 'make -f make_mingw32.mak',
+  \     'cygwin' : 'make -f make_cygwin.mak',
+  \     'mac' : 'make -f make_mac.mak',
+  \     'unix' : 'make -f make_unix.mak',
+  \    },
+  \ }
+" --- colorscheme ---
 NeoBundle 'tomasr/molokai'
 
 " vimrc に記述されたプラグインでインストールされていないものがないかチェックする
