@@ -1,5 +1,3 @@
-syntax on
-
 set number
 set title
 set ambiwidth=double
@@ -17,30 +15,40 @@ set whichwrap=b,s,[,],<,>
 set backspace=indent,eol,start
 set wildmenu
 
-"括弧を補完する
-n! DeleteParenthesesAdjoin()
-    let pos = col(".") - 1  " カーソルの位置．1からカウント
-    let str = getline(".")  " カーソル行の文字列
-    let parentLList = ["(", "[", "{", "\'", "\""]
-    let parentRList = [")", "]", "}", "\'", "\""]
-    let cnt = 0
 
-    let output = ""
 
-    " カーソルが行末の場合
-    if pos == strlen(str)
-        return "\b"
-    endif
-    for c in parentLList
-        " カーソルの左右が同種の括弧
-        if str[pos-1] == c && str[pos] == parentRList[cnt]
-            call cursor(line("."), pos + 2)
-            let output = "\b"
-            break
-        endif
-        let cnt += 1
-    endfor
-    return output."\b"
-endfunction
-" BackSpaceに割り当て
-inoremap <silent> <BS> <C-R>=DeleteParenthesesAdjoin()<CR>
+
+
+
+" -------- neobundle settings -------
+if has('vim_starting')
+  set nocompatible
+  " neobundle をインストールしていない場合は自動インストール
+  if !isdirectory(expand("~/dotfiles/.vim/bundle/neobundle.vim/"))
+    echo "install neobundle..."
+    " vim からコマンド呼び出しているだけ neobundle.vim のクローン
+    :call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
+  endif
+  " runtimepath の追加は必須
+  set runtimepath+=~/dotfiles/.vim/bundle/neobundle.vim/
+endif
+call neobundle#begin(expand('~/dotfiles/.vim/bundle'))
+let g:neobundle_default_git_protocol='https'
+
+" neobundle#begin - neobundle#end の間に導入するプラグインを記載します。
+NeoBundleFetch 'Shougo/neobundle.vim'
+" ↓こんな感じが基本の書き方
+" plugin
+NeoBundle 'Shougo/unite.vim'
+" colorscheme
+NeoBundle 'tomasr/molokai'
+
+" vimrc に記述されたプラグインでインストールされていないものがないかチェックする
+NeoBundleCheck
+call neobundle#end()
+filetype plugin indent on
+" colorschemeを変更する
+set t_Co=256
+syntax on
+colorscheme molokai
+
