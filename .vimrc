@@ -1,5 +1,5 @@
 " 最初に読み込む
-source ~/dotfile/.vim/.vimrc
+source ~/dotfiles/.vim/.vimrc
 " conf.d内にあるファイルを全部読み込む
-set runtimepath+=~/dotfile/.vim/
+set runtimepath+=~/dotfiles/.vim/
 runtime! conf.d/*.vim
