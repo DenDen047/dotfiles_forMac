@@ -19,11 +19,12 @@ set wildmenu
 
 
 
+" 以下の参考URL -> http://qiita.com/himinato/items/caf5a0b19ce893a75363
 " -------- neobundle settings -------
 if has('vim_starting')
   set nocompatible
   " neobundle をインストールしていない場合は自動インストール
-  if !isdirectory(expand("~/dotfiles/.vim/bundle/neobundle.vim/"))
+  if !isdirectory(expand("~/dotfiles_forMac/.vim/bundle/neobundle.vim/"))
     echo "install neobundle..."
     " vim からコマンド呼び出しているだけ neobundle.vim のクローン
     :call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
@@ -31,7 +32,7 @@ if has('vim_starting')
   " runtimepath の追加は必須
   set runtimepath+=~/dotfiles/.vim/bundle/neobundle.vim/
 endif
-call neobundle#begin(expand('~/dotfiles/.vim/bundle'))
+call neobundle#begin(expand('~/dotfiles_forMac/.vim/bundle'))
 let g:neobundle_default_git_protocol='https'
 
 " neobundle#begin - neobundle#end の間に導入するプラグインを記載します。
