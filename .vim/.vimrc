@@ -27,7 +27,7 @@ if has('vim_starting')
   if !isdirectory(expand("~/dotfiles_forMac/.vim/bundle/neobundle.vim/"))
     echo "install neobundle..."
     " vim からコマンド呼び出しているだけ neobundle.vim のクローン
-    :call system("git clone git://github.com/Shougo/neobundle.vim ~/dotfiles_forMac/.vim/bundle/neobundle.vim")
+    :call system("git clone https://github.com/Shougo/neobundle.vim.git ~/dotfiles_forMac/.vim/bundle/neobundle.vim")
   endif
   " runtimepath の追加は必須
   set runtimepath+=~/dotfiles_forMac/.vim/bundle/neobundle.vim/
