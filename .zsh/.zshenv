@@ -36,3 +36,4 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 #PATH
 export PATH="/usr/local/bin:$PATH"
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:~/.virtualenvs/my_venv/lib/python2.7/site-packages:$PYTHONPATH
+export PATH=/usr/texbin:$PATH
