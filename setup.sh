@@ -1,4 +1,4 @@
-!#/bin/zsh
+#!/bin/zsh
 
 rm -rf ~/dotfiles_forMac/.vim/bundle
 mkdir ~/dotfiles_forMac/.vim/bundle
