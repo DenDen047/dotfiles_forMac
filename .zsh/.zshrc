@@ -137,6 +137,7 @@ alias cp='cp -i'
 alias mv='mv -i'
  
 alias mkdir='mkdir -p'
+
  
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
