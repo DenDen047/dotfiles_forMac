@@ -9,9 +9,12 @@ ln -s ~/dotfiles_forMac/.zshenv ~/.zshenv
 ln -s ~/dotfiles_forMac/.ssh/config ~/.ssh/config
 
 echo "Installing lib of pip..."
+pip install ipython
 pip install requests
 pip install BeautifulSoup
 pip install numpy
+pip install virtualenv
+pip install virtualenvwarapper
 
 echo "Setting for Tex"
 export PATH=/usr/texbin:$PATH
