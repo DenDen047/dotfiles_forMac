@@ -16,6 +16,11 @@ pip install numpy
 pip install virtualenv
 pip install virtualenvwarapper
 
+echo "Install pyHook..."
+cd ~/Downloads
+wget http://sourceforge.net/projects/pyhook/files/latest/download.zip
+cd ~/
+
 echo "Setting for Tex"
 export PATH=/usr/texbin:$PATH
 sudo tlmgr update --self --all
