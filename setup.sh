@@ -11,6 +11,7 @@ ln -s ~/dotfiles_forMac/.ssh/config ~/.ssh/config
 echo "Installing lib of pip..."
 pip install requests
 pip install BeautifulSoup
+pip install numpy
 
 echo "Setting for Tex"
 export PATH=/usr/texbin:$PATH
