@@ -13,6 +13,7 @@ pip install ipython
 pip install moviepy
 pip install requests
 pip install BeautifulSoup
+pip install BeautifulSoup4
 pip install numpy
 pip install virtualenv
 pip install virtualenvwarapper
@@ -41,4 +42,6 @@ sudo ln -fs "/System/Library/Fonts/ヒラギノ角ゴ ProN W6.otf" ./HiraKakuPro
 sudo ln -fs "/Library/Fonts/ヒラギノ角ゴ StdN W8.otf" ./HiraKakuStdN-W8.otf
 sudo texconfig-sys rehash
 
+echo "Setting of Ruby"
+mkdir -p ~/.rbenv/plugins
 

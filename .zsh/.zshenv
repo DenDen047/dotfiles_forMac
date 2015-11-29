@@ -35,13 +35,23 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 #PATH
 export PATH="/usr/local/bin:$PATH"
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:~/.virtualenvs/my_venv/lib/python2.7/site-packages:$PYTHONPATH
+# export PYTHONPATH=/usr/local/lib/python2.7/site-packages:~/.virtualenvs/my_venv/lib/python2.7/site-packages:$PYTHONPATH
 export PATH=/usr/texbin:$PATH
 export PYENV_ROOT="${HOME}/.pyenv"
+export GNUTERM=x11
 if [ -d "${PYENV_ROOT}" ]; then
     export PATH=${PYENV_ROOT}/bin:$PATH
     eval "$(pyenv init -)"
 fi
+#for Cuda
+export PATH=/Developer/NVIDIA/CUDA-7.5/bin:$PATH
+export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-7.5/lib:$DYLD_LIBRARY_PATH
+export CUDA_ROOT=/Developer/NVIDIA/CUDA-7.5/
+export PATH=$PATH:/Developer/NVIDIA/CUDA-7.5/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/Developer/NVIDIA/CUDA-7.5/lib
+export CPATH=$CPATH:/Developer/NVIDIA/CUDA-7.5/include
+export CUDA_INC_DIR=/Developer/NVIDIA/CUDA-7.5/bin:$CUDA_INC_DIR
+export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/Developer/NVIDIA/CUDA-7.5/lib
 
 # alias
 alias brew="env PATH=${PATH/\/Users\/muramatsunaoya\/\.pyenv\/shims:/} brew"
