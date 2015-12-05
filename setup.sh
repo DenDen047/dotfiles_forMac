@@ -10,6 +10,7 @@ ln -s ~/dotfiles_forMac/.ssh/config ~/.ssh/config
 
 echo "Installing lib of pip..."
 pip install ipython
+pip install pyserial
 pip install moviepy
 pip install requests
 pip install BeautifulSoup
