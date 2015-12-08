@@ -51,6 +51,8 @@ export PATH=$PATH:/Developer/NVIDIA/CUDA-7.5/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/Developer/NVIDIA/CUDA-7.5/lib
 export CPATH=$CPATH:/Developer/NVIDIA/CUDA-7.5/include
 export CUDA_INC_DIR=/Developer/NVIDIA/CUDA-7.5/bin:$CUDA_INC_DIR
+# for Brewfile
+# export HOMEBREW_BREWFILE=~/Brewfile/Brewfile
 
 # alias
 alias brew="env PATH=${PATH/\/Users\/muramatsunaoya\/\.pyenv\/shims:/} brew"
