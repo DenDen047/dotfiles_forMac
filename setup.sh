@@ -48,3 +48,6 @@ sudo texconfig-sys rehash
 echo "Setting of Ruby"
 mkdir -p ~/.rbenv/plugins
 
+echo "Setting of Vagrant"
+vagrant plugin install sahara
+
