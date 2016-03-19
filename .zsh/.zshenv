@@ -43,14 +43,14 @@ if [ -d "${PYENV_ROOT}" ]; then
     export PATH=${PYENV_ROOT}/bin:$PATH
     eval "$(pyenv init -)"
 fi
-#for Cuda
+# Cuda
 export CUDA_ROOT=/Developer/NVIDIA/CUDA-7.5/
 export PATH=$PATH:/Developer/NVIDIA/CUDA-7.5/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/Developer/NVIDIA/CUDA-7.5/lib
-export DYLD_LIBRARY_PATH=/$DYLD_LIBRARY_PATH:/Developer/NVIDIA/CUDA-7.5/lib
+export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/Developer/NVIDIA/CUDA-7.5/lib
 export CPATH=$CPATH:/Developer/NVIDIA/CUDA-7.5/include
 export CUDA_INC_DIR=$CUDA_INC_DIR:/Developer/NVIDIA/CUDA-7.5/bin
-# for Brewfile
+# Brewfile
 export HOMEBREW_BREWFILE=/usr/local/Library/DenDen047_Brewfile/Brewfile
 
 # docker
