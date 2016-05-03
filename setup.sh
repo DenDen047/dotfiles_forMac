@@ -11,6 +11,7 @@ ln -s ~/dotfiles_forMac/.ssh/config ~/.ssh/config
 ln -s ~/dotfiles_forMac/.theano/.theanorc ~/.theanorc
 
 echo "Installing lib of pip..."
+pip install --upgrade pip
 pip install ipython
 pip install pyserial
 pip install moviepy
