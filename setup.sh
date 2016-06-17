@@ -18,6 +18,7 @@ pip install moviepy
 pip install requests
 pip install BeautifulSoup
 pip install BeautifulSoup4
+pip install selenium
 pip install numpy
 pip install virtualenv
 pip install virtualenvwarapper
