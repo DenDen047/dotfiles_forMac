@@ -30,6 +30,7 @@ cd ~/
 
 echo "Setting for Tex"
 export PATH=/usr/texbin:$PATH
+export PATH=/Library/TeX/texbin:$PATH
 sudo tlmgr update --self --all
 sudo mkdir -p /usr/local/texlive/texmf-local/fonts/opentype/hiragino/
 cd /usr/local/texlive/texmf-local/fonts/opentype/hiragino/
@@ -52,4 +53,7 @@ mkdir -p ~/.rbenv/plugins
 
 echo "Setting of Vagrant"
 vagrant plugin install sahara
+
+echo "Setting of Docker"
+docker-machine create --driver virtualbox default2
 
