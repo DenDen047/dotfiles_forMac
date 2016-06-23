@@ -54,6 +54,7 @@ export CUDA_INC_DIR=$CUDA_INC_DIR:/Developer/NVIDIA/CUDA-7.5/bin
 export HOMEBREW_BREWFILE=/usr/local/Library/DenDen047_Brewfile/Brewfile
 
 # docker
+# docker-machine start default2
 eval "$(docker-machine env default2)"
 
 # alias
