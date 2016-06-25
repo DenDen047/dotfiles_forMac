@@ -55,7 +55,7 @@ export HOMEBREW_BREWFILE=/usr/local/Library/DenDen047_Brewfile/Brewfile
 
 # docker
 # docker-machine start default2
-eval "$(docker-machine env default2)"
+# eval "$(docker-machine env default2)"
 
 # alias
 alias brew="env PATH=${PATH/\/Users\/muramatsunaoya\/\.pyenv\/shims:/} brew"
