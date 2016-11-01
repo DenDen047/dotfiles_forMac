@@ -42,6 +42,7 @@ export GNUTERM=x11
 if [ -d "${PYENV_ROOT}" ]; then
     export PATH=${PYENV_ROOT}/bin:$PATH
     eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
 fi
 # Cuda
 export CUDA_ROOT=/Developer/NVIDIA/CUDA-7.5/
