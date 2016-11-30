@@ -39,11 +39,11 @@ export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/texbin
 export PYENV_ROOT="${HOME}/.pyenv"
 export GNUTERM=x11
-if [ -d "${PYENV_ROOT}" ]; then
-    export PATH=${PYENV_ROOT}/bin:$PATH
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
-fi
+export PATH=${PYENV_ROOT}/bin:$PATH
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 # Cuda
 export CUDA_ROOT=/Developer/NVIDIA/CUDA-7.5/
 export PATH=$PATH:/Developer/NVIDIA/CUDA-7.5/bin
