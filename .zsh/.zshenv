@@ -34,7 +34,7 @@ typeset -gxU path cdpath fpath manpath ld_library_path include
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 #PATH
-export PATH=$PATH:/usr/local/bin
+export PATH=/usr/local/bin:/usr/local/share/python:$PATH
 # export PYTHONPATH=/usr/local/lib/python2.7/site-packages:~/.virtualenvs/my_venv/lib/python2.7/site-packages:$PYTHONPATH
 export PATH=$PATH:/usr/texbin
 export PYENV_ROOT="${HOME}/.pyenv"
