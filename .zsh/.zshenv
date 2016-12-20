@@ -37,10 +37,11 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export PATH=/usr/local/bin:/usr/local/share/python:$PATH
 # export PYTHONPATH=/usr/local/lib/python2.7/site-packages:~/.virtualenvs/my_venv/lib/python2.7/site-packages:$PYTHONPATH
 export PATH=$PATH:/usr/texbin
-export PYENV_ROOT="${HOME}/.pyenv"
 export GNUTERM=x11
+export PYENV_ROOT=/usr/local/var/pyenv
+export CFLAGS="-I$(xcrun --show-sdk-path)/usr/include"
 export PATH=${PYENV_ROOT}/bin:$PATH
-eval "$(pyenv init -)"
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 eval "$(pyenv virtualenv-init -)"
 
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
