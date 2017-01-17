@@ -6,7 +6,7 @@ mkdir ~/dotfiles_forMac/.vim/bundle
 
 echo "creat Symbolic Link..."
 ln -s ~/dotfiles_forMac/.vimrc ~/.vimrc
-ln -s ~/dotfiles_forMac/.zshenv ~/.zshenv
+ln -s ~/dotfiles_forMac/.zshenv ~/.zshrc
 ln -s ~/dotfiles_forMac/.ssh/config ~/.ssh/config
 ln -s ~/dotfiles_forMac/.theano/.theanorc ~/.theanorc
 
