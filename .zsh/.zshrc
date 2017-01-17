@@ -180,4 +180,4 @@ esac
 # vim:set ft=zsh:
 
 
-
+source ~/.zshenv
