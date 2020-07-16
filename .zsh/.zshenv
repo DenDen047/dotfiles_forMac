@@ -35,16 +35,15 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 #PATH
 export PATH=/usr/local/bin:/usr/local/share/python:$PATH
-# export PYTHONPATH=/usr/local/lib/python2.7/site-packages:~/.virtualenvs/my_venv/lib/python2.7/site-packages:$PYTHONPATH
 export PATH=$PATH:/usr/texbin
 export GNUTERM=x11
-export PYENV_ROOT=/usr/local/var/pyenv
 export CFLAGS="-I$(xcrun --show-sdk-path)/usr/include"
-export PATH=${PYENV_ROOT}/bin:$PATH
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-eval "$(pyenv virtualenv-init -)"
 
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 # Cuda
 export CUDA_ROOT=/Developer/NVIDIA/CUDA-7.5/
 export PATH=$PATH:/Developer/NVIDIA/CUDA-7.5/bin
