@@ -16,61 +16,6 @@ set backspace=indent,eol,start
 set wildmenu
 
 
-
-
-
-" 以下の参考URL -> http://qiita.com/himinato/items/caf5a0b19ce893a75363
-" -------- neobundle settings -------
-if has('vim_starting')
-  set nocompatible
-  " neobundle をインストールしていない場合は自動インストール
-  if !isdirectory(expand("~/dotfiles_forMac/.vim/bundle/neobundle.vim/"))
-    echo "install neobundle..."
-    " vim からコマンド呼び出しているだけ neobundle.vim のクローン
-    :call system("git clone https://github.com/Shougo/neobundle.vim.git ~/dotfiles_forMac/.vim/bundle/neobundle.vim")
-  endif
-  " runtimepath の追加は必須
-  set runtimepath+=~/dotfiles_forMac/.vim/bundle/neobundle.vim/
-endif
-call neobundle#begin(expand('~/dotfiles_forMac/.vim/bundle'))
-let g:neobundle_default_git_protocol='https'
-
-" neobundle#begin - neobundle#end の間に導入するプラグインを記載します。
-NeoBundleFetch 'Shougo/neobundle.vim'
-" ↓こんな感じが基本の書き方
-" --- plugin ---
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'jiangmiao/auto-pairs'
-" NeoBundle 'terryma/vim-multiple-cursors' <- 動作がおかしい
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'Shougo/vimproc', {
-  \ 'build' : {
-  \     'windows' : 'make -f make_mingw32.mak',
-  \     'cygwin' : 'make -f make_cygwin.mak',
-  \     'mac' : 'make -f make_mac.mak',
-  \     'unix' : 'make -f make_unix.mak',
-  \    },
-  \ }
-NeoBundleLazy 'Shougo/neocomplete.vim', {
-  \ 'depends' : 'Shougo/vimproc',
-  \ 'autoload' : { 'insert' : 1,}
-  \ }
-" --- colorscheme ---
-NeoBundle 'tomasr/molokai'
-
-" vimrc に記述されたプラグインでインストールされていないものがないかチェックする
-NeoBundleCheck
-call neobundle#end()
-filetype plugin indent on
-" colorschemeを変更する
-set t_Co=256
-syntax on
-colorscheme molokai
-
-
-
-
 " http://blog.remora.cx/2010/12/vim-ref-with-unite.html
 """"""""""""""""""""""""""""""
 " Unit.vimの設定

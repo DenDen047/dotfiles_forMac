@@ -53,7 +53,7 @@ export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/Developer/NVIDIA/CUDA-7.5/lib
 export CPATH=$CPATH:/Developer/NVIDIA/CUDA-7.5/include
 export CUDA_INC_DIR=$CUDA_INC_DIR:/Developer/NVIDIA/CUDA-7.5/bin
 # Brewfile
-export HOMEBREW_BREWFILE=/usr/local/Library/DenDen047_Brewfile/Brewfile
+#export HOMEBREW_BREWFILE=/usr/local/Library/DenDen047_Brewfile/Brewfile
 
 # docker
 # docker-machine start default2
