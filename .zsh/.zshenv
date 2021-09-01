@@ -36,7 +36,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 #PATH
 export PATH=/usr/local/bin:/usr/local/share/python:$PATH
 export PATH=$PATH:/usr/texbin
-export PATH="$PATH:/opt/homebrew/bin"
+export PATH="/opt/homebrew/bin:$PATH"
 export GNUTERM=x11
 export CFLAGS="-I$(xcrun --show-sdk-path)/usr/include"
 
