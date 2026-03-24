@@ -140,6 +140,8 @@ alias mv='mv -i'
  
 alias mkdir='mkdir -p'
 
+alias cc='claude --dangerously-skip-permissions'
+
  
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
